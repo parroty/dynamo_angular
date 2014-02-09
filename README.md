@@ -1,6 +1,5 @@
 ## Information
-Very simple application for applying dynamo as angular-resource backend.
-It creates and updates simple object with rails's scaffold like interface.
+Very simple application for applying dynamo as angular-resource backend. It creates and updates simple object with rails's scaffold like interface.
 
 ![htmlimage](https://raw.github.com/parroty/dynamo_angular/master/image/image.png)
 
@@ -9,12 +8,14 @@ It creates and updates simple object with rails's scaffold like interface.
 - Create "ecto_simple" database on PostgreSQL
     - ecto repo is defined as `ecto://postgres:postgres@localhost/ecto_simple`.
 
-    $ psql postgres
-    psql (9.1.11)
-    Type "help" for help.
+```
+$ psql postgres
+psql (9.1.11)
+Type "help" for help.
 
-    postgres=# create database ecto_simple;
-    postgres=# \q
+postgres=# create database ecto_simple;
+postgres=# \q
+```
 
 ### Trying Sample
 
