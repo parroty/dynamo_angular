@@ -1,0 +1,15 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <title>AnglarJS Sample with Dynamo</title>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="http://code.angularjs.org/1.2.9/angular.js"></script>
+    <script src="http://code.angularjs.org/1.2.9/angular-resource.js"></script>
+    <script src="http://code.angularjs.org/1.2.9/angular-route.js"></script>
+    <script src="static/javascripts/app.js"></script>
+    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+  </head>
+  <body ng-app="app" ng-controller='AppCtrl'>
+    <ng-view></ng-view>
+  </body>
+</html>

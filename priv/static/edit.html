@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="page-header">
+    <h1>{{title}}</h1>
+  </div>
+  <form>
+    <div class="control-group">
+      <label class="control-label">Name</label>
+      <div class="controls">
+        <input ng-model="person.name" autofocus />
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label class="control-label">Description</label>
+      <div class="controls">
+        <input ng-model="person.description"/>
+      </div>
+    </div>
+
+    <div class="form-actions">
+      <a href="#" ng-click="save()" class="btn btn-primary">Save</a>
+      <a href="#/" class="btn">Cancel</a>
+    </div>
+  </form>
+</div>
