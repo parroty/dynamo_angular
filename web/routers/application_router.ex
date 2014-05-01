@@ -30,7 +30,7 @@ defmodule ApplicationRouter do
   @doc "create"
   post "/crews" do
     crew = Crew.parse(conn.params) |> Crew.new
-    Repo.create(crew)
+    Repo.insert(crew)
     conn.resp 200, to_json(crew)
   end
 
