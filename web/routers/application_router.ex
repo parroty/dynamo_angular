@@ -29,7 +29,7 @@ defmodule ApplicationRouter do
 
   @doc "create"
   post "/crews" do
-    crew = Crew.parse(conn.params) |> Crew.new
+    crew = Map.merge(%Crew{}, Crew.parse(conn.params))
     Repo.insert(crew)
     conn.resp 200, to_json(crew)
   end
@@ -37,7 +37,7 @@ defmodule ApplicationRouter do
   @doc "update"
   put "/crews/:id" do
     crew = Repo.get(Crew, get_id(conn.params))
-    Crew.parse(conn.params) |> crew.update |> Repo.update
+    Map.merge(crew, Crew.parse(conn.params)) |> Repo.update
     conn.resp 200, ""
   end
 
@@ -52,6 +52,6 @@ defmodule ApplicationRouter do
   end
 
   defp get_id(param) do
-    Dict.get(param, :id) |> binary_to_integer
+    param[:id] |> binary_to_integer
   end
 end

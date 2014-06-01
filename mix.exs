@@ -18,8 +18,8 @@ defmodule DynamoAngular.Mixfile do
 
   defp deps do
     [ { :cowboy, github: "extend/cowboy" },
-      { :postgrex, "~> 0.4.2", hex_app: :postgrex },
-      { :ecto, github: "elixir-lang/ecto"},
+      { :postgrex, "~> 0.5" },
+      { :ecto, "~> 0.2"},
       { :dynamo, "~> 0.1.0-dev", github: "dynamo/dynamo" },
       { :jsex, github: "talentdeficit/jsex"} ]
   end

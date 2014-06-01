@@ -1,7 +1,7 @@
 defmodule Crew do
   use Ecto.Model
 
-  queryable "crew" do
+  schema "crew" do
     field :name, :string
     field :description, :string
   end
@@ -13,7 +13,7 @@ defmodule Crew do
   end
 
   def parse(params) do
-    [ name: Dict.get(params, :name),
-      description: Dict.get(params, :description) ]
+    %{ name: params[:name],
+      description: params[:description] }
   end
 end
